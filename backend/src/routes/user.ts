@@ -19,8 +19,8 @@ userRouter.post('/signup', async (c) => {
     }).$extends(withAccelerate())
     try{
       const body = await c.req.json();
-      console.log(body)
-      console.log("ddffffffffffffffffffff")
+      
+      
       const { success} = signupInput.safeParse(body);
       if(!success){
         c.status(411);
@@ -35,15 +35,14 @@ userRouter.post('/signup', async (c) => {
           name:body.name
         }
       })
-      console.log(user);
-      console.log("1111111111111111111111111111111")
+      
       const token = await sign({id: user.id},c.env.JWT_SECRET)
       return c.json({
         jwt:token
       })
     }
     catch(e){
-      console.log(e);
+      
       c.status(411);
       return c.text("Invalid")
     }

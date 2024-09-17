@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { Avatar } from "./BlogCard"
 
 export const Appbar = ()=>{
-    return <div className="border-b px-10 py-3 flex justify-between">
+    return <div className="border-b px-4 py-2 flex justify-between">
         <Link className="flex flex-col justify-center cursor-pointer font-semibold text-lg" to={'/blogs'}>
             Blogify      
         </Link>
