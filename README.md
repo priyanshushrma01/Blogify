@@ -1,6 +1,6 @@
 # Blogify: A Medium-Inspired Blogging Platform
 
-Blogify is a powerful blogging application built with a modern tech stack.
+Blogify is a sleek blogging platform where writers can share their stories while readers enjoy a distraction-free reading experience
 
 Tech stack :-
 - React in the frontend
