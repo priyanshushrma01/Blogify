@@ -17,7 +17,7 @@ export const blogRouter = new Hono<{
 
 blogRouter.use("/*",async (c,next)=>{
   const token = c.req.header("Authorization") || "";
-  // const token = header?.split(" ")[1] || "";
+  
   try{
     const res = await verify(token,c.env.JWT_SECRET);
   
@@ -61,7 +61,7 @@ blogRouter.post('/',async (c) => {
           authorId:authorId
         }
     })
-    // console.log(Post);
+    
 
     return c.json({
       id:Post.id
@@ -97,7 +97,7 @@ blogRouter.put('/', async (c) => {
   
 })
  
-//add pagination
+
 blogRouter.get('/bulk', async (c) => {
   const prisma = new PrismaClient({
     datasourceUrl: c.env.DATABASE_URL,
