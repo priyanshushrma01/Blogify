@@ -30,7 +30,7 @@ export const Blogs = ()=>{
                 authorName={blog.author.name || "Anonymous"} 
                 title={blog.title} 
                 content={blog.content} 
-                publishedDate="14th September 2024"
+                publishedDate="17th January 2025"
                 />
             )}
             
