@@ -39,13 +39,13 @@ export const Auth = ({type} : {type : "signup" | "signin"})=>{
                     </div>
                 </div>
                 <div className="pt-4">
-                    {type==="signup" ? <LabelledInput label="Name" placeholder="Priyanshu Sharma" onChange={(e)=>{
+                    {type==="signup" ? <LabelledInput label="Name" placeholder="John" onChange={(e)=>{
                         setPostInputs(c => ({
                             ...c,
                             name:e.target.value
                         }))
                     }}  /> : null }
-                    <LabelledInput label="Username" placeholder="priyanshu@gmail.com" onChange={(e)=>{
+                    <LabelledInput label="Email" placeholder="John123@gmail.com" onChange={(e)=>{
                         setPostInputs(c => ({
                             ...c,
                             email:e.target.value
